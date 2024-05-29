@@ -107,44 +107,47 @@ export const ArticleParamsForm = ({
 					onReset={handleFormReset}
 					onSubmit={handleFormSubmit}>
 					<Text
-						as={'h2'}
+						as='h2'
 						size={31}
-						dynamic={false}
 						weight={800}
-						fontStyle={'normal'}
-						uppercase={true}
-						align={'left'}
-						family={'open-sans'}
-						dynamicLite={false}>
+						fontStyle='normal'
+						uppercase
+						align='left'
+						family='open-sans'>
 						Задайте параметры
 					</Text>
 					<Select
 						options={fontFamilyOptions}
 						selected={newFontFamily}
-						title={'Шрифт'}
-						onChange={setFontFamily}></Select>
+						title='Шрифт'
+						onChange={setFontFamily}
+					/>
 					<RadioGroup
-						title={'Размер шрифта'}
-						name={'font-size'}
+						title='Размер шрифта'
+						name='font-size'
 						options={fontSizeOptions}
 						selected={newFontSize}
-						onChange={setFontSize}></RadioGroup>
+						onChange={setFontSize}
+					/>
 					<Select
 						options={fontColors}
 						selected={newFontColor}
-						title={'Цвет шрифта'}
-						onChange={setFontColor}></Select>
-					<Separator></Separator>
+						title='Цвет шрифта'
+						onChange={setFontColor}
+					/>
+					<Separator />
 					<Select
 						options={backgroundColors}
 						selected={newBackgroundColor}
-						title={'Цвет фона'}
-						onChange={setBackgroundColor}></Select>
+						title='Цвет фона'
+						onChange={setBackgroundColor}
+					/>
 					<Select
 						options={contentWidthArr}
 						selected={newContentWidth}
-						title={'Ширина контента'}
-						onChange={setContentWidth}></Select>
+						title='Ширина контента'
+						onChange={setContentWidth}
+					/>
 					<div className={styles.bottomContainer}>
 						<Button title='Сбросить' type='reset' color='black' />
 						<Button title='Применить' type='submit' color='gold' />
