@@ -60,11 +60,6 @@ export const ArticleParamsForm = ({
 	//Ссылка на элемент, используемый хуком закрытия меню
 	const rootRef = useRef<HTMLDivElement>(null);
 
-	//Обработчик клика по кнопке открытия/закрытия меню настроек
-	function handleArrowClick() {
-		setIsMenuOpened(!isMenuOpened);
-	}
-
 	//Хук, который закрывает меню, если произошел клик вне формы
 	useOutsideClickClose({
 		isOpen: isMenuOpened,
@@ -98,7 +93,10 @@ export const ArticleParamsForm = ({
 
 	return (
 		<div ref={rootRef}>
-			<ArrowButton onClick={handleArrowClick} isOpened={isMenuOpened} />
+			<ArrowButton
+				onClick={() => setIsMenuOpened(!isMenuOpened)}
+				isOpened={isMenuOpened}
+			/>
 			<aside
 				className={clsx(
 					styles.container,

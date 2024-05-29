@@ -7,23 +7,23 @@ import styles from './index.module.scss';
 
 export const App = () => {
 	//Состояние настроек страницы
-	const [appState, setAppState] = useState(defaultArticleState);
+	const [articleState, setArticleState] = useState(defaultArticleState);
 
 	return (
 		<main
 			className={styles.main}
 			style={
 				{
-					'--font-family': appState.fontFamilyOption.value,
-					'--font-size': appState.fontSizeOption.value,
-					'--font-color': appState.fontColor.value,
-					'--container-width': appState.contentWidth.value,
-					'--bg-color': appState.backgroundColor.value,
+					'--font-family': articleState.fontFamilyOption.value,
+					'--font-size': articleState.fontSizeOption.value,
+					'--font-color': articleState.fontColor.value,
+					'--container-width': articleState.contentWidth.value,
+					'--bg-color': articleState.backgroundColor.value,
 				} as CSSProperties
 			}>
 			<ArticleParamsForm
-				currentAppState={appState}
-				setCurrentAppState={setAppState}
+				currentAppState={articleState}
+				setCurrentAppState={setArticleState}
 			/>
 			<Article />
 		</main>
